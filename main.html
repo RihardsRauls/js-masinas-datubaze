@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="FileSaver.js" defer></script>
+    <title>Javascript Klientu Datubāzes Menedžeris</title>
+</head>
+<body>
+    <div class="thetitle">
+        <h2>Javascript Klientu Datubāzes Menedžeris v1.3</h2>
+    </div>
+    <div>
+        <div class="no-print">
+            <table>
+                <tr>
+                    <th>
+                        <div>
+                            <label for="meklesana">Meklēt datubāzē</label>
+                            <input id="meklesana">
+                        </div>
+                    </th>
+                    <th>
+                        <label for="veids">Meklēt pēc</label>
+                        <select class="max" name="veids" id="veids">
+                            <option value="vards">Vārds</option>
+                            <option value="uzvards">Uzvārds</option>
+                            <option value="telefons">Telefons</option>
+                            <option value="marka">Marka</option>
+                            <option value="modelis">Modelis</option>
+                            <option value="ierasanas">Ierašanās Datums</option>
+                            <option value="vin">VIN numurs</option>
+                            <option value="tl-num">Mašīnas numurs</option>
+                            <option value="apraksts">Apraksts</option>
+                            <option value="id">Maksājuma ID</option>
+                        </select>
+                    </th>
+                    <th>
+                        <div><label for="meklesanas_poga"><br></label><input id="meklesanas_poga" type="button" value="Meklēt" onclick="search()"></div>
+                    </th>
+                </tr>      
+            </table>
+        </div>
+        <table class="bigborder">
+            <form id="informacija">
+                <tr class="sarkans">
+                   <th>
+                     <div class="padding">
+                        <label for="vards">Vārds</label>
+                        <input id="vards">
+                    </div>
+                    </th>
+                    <th>
+                        <div class="padding">
+                        <label for="uzvards">Uzvārds</label>
+                        <input id="uzvards">
+                        </div>
+                    </th>                
+                   <th>
+                    <div class="padding">
+                        <label for="telefons">Telefons</label>
+                        <input id="telefons">
+                    </div>
+                    </th>
+                    <th>
+                        <div class="padding">
+                            <label for="ierasanas">Ierašanās datums</label>
+                            <input id="ierasanas">
+                        </div>
+                    </th>                     
+                </tr>
+                <tr class="zils">
+                    <th>
+                        <div class="padding">
+                            <label for="modelis">Modelis</label>
+                            <input id="modelis">
+                        </div>
+                    </th>
+                    <th>
+                        <div class="padding">
+                            <label for="marka">Marka</label>
+                            <input id="marka">
+                        </div>
+                    </th>  
+                    <th>
+                        <div class="padding">
+                            <label for="vin">VIN numurs</label>
+                            <input id="vin">
+                        </div>
+                    </th>
+                    <th>
+                        <div class="padding">
+                            <label for="tl-num">Mašīnas numurs</label>
+                            <input id="tl-num" value="">
+                        </div>
+                    </th>                
+                </tr>
+                <tr>
+                    <th class="dzeltens" colspan="3">
+                        <div class="padding">
+                        <label for="apraksts">Apraksts</label>
+                        <input id="apraksts">
+                        </div>
+                    </th>   
+                    <th>
+                        <div class="padding">
+                            <label for="id">Maksājuma ID</label>
+                            <input id="id" disabled>
+                        </div>
+                    </th>            
+                </tr>
+                <tr>
+                    <th>
+                        <div><button type="button" onclick="saglabat()">Saglabāt Datubāzē</button></div>
+                    </th>
+                    <th>
+                        <div><input id="JaunsKlients" type="button" value="Jauns Klients" onclick="izveidojaunuId()"></div>
+                    </th> 
+                    <th>
+                        <div>
+                            <label for="savetojson" id="savetojsonlabel"></label>
+                            <button id="savetojson" type="button" onclick="saglabatuzJSON()">Lejuplādēt Kopiju</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div>
+                            <label for="atsvaidzinatpoga" id="atsvaidzinattabululabel"></label>
+                            <input id="atsvaidzinatpoga" type="button" value="Atsvaidzināt tabulu" onclick="generateTable()">
+                        </div>
+                    </th> 
+                </tr>
+            </form>  
+        </table>
+        <table id="tabula"></table>
+        <br>
+    </div>
+<div class="izveidoja"><div class="izveidoja_teksts">izveidoja Rihards un Dāvis</div></div>
+</body>
+</html>

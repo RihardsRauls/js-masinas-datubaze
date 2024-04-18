@@ -1,0 +1,10 @@
+Secinājumi par projektu un tā turpmāko attīstību:
+	Atjauninājumi nav tuvākajā laikā plānoti, ja kaut kas kritisks parādās, tad tiks investēti resursi tā labošanai.	
+
+	v1.1
+		*Pievienotas krāsas tabulai (pagaidām nav pie datu ievades).
+			*Optimizējām, tapēc ka pirmā implementēšana nebija effektīva.
+		*Noņemts "LV-", kas bija paredzēts priekš testēšanas.
+		*Pamainīts izkrārtojums tabulai un datu ievedei (Lai būtu pielāgots jaunajai krāsu kategorijai) 
+	v1.2
+		*Pievienojām "izdzēst" pogu
